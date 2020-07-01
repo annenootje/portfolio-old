@@ -1,0 +1,50 @@
+@import url("https://use.typekit.net/lgw5dfv.css");
+
+* {
+  font-family: museo, serif;
+}
+
+%heading-1 {
+  line-height: 1;
+  font-size: 70px;
+  font-weight: 700;
+  letter-spacing: .03em;
+}
+
+%heading-2 {
+  line-height: 1;
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: .03em;
+}
+
+%heading-3 {
+  line-height: 1;
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: .03em;
+}
+
+%heading-4 {
+  line-height: 1;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+%heading-5 {
+  line-height: 1;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+%heading-6 {
+  line-height: 1;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+%text {
+  line-height: 1.5;
+  font-size: 14px;
+  font-weight: 400;
+}

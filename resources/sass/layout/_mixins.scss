@@ -1,0 +1,22 @@
+@mixin container {
+  @include grid;
+
+  width: 100%;
+  max-width: $max-width;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 70px;
+  padding-left: 70px;
+}
+
+%standard-top-space {
+  padding-top: 200px;
+
+  @media (max-width: $media-lg) {
+    padding-top: 120px;
+  }
+
+  @media (max-width: $media-sm) {
+    padding-top: 80px;
+  }
+}

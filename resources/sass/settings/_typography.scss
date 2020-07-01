@@ -1,0 +1,94 @@
+html {
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+}
+
+* {
+  @extend %text;
+  line-height: 1.5;
+}
+
+h1 {
+  @extend %heading-1;
+
+  &.large {
+    font-size: 100px;
+  }
+}
+
+h2 {
+  @extend %heading-2;
+}
+
+h3 {
+  @extend %heading-3;
+}
+
+h4 {
+  @extend %heading-4;
+}
+
+h5 {
+  @extend %heading-5;
+}
+
+h6 {
+  @extend %heading-6;
+}
+
+p {
+  @extend %text;
+}
+
+b {
+  font-weight: 700;
+}
+
+a {
+  text-decoration: none;
+  transition: $transition;
+}
+
+ul {
+  padding-left: 15px;
+
+  li {
+    position: relative;
+    list-style: none;
+
+    &::before {
+      content: '-';
+
+      position: absolute;
+      left: -15px;
+    }
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+
+  & + p {
+    margin-top: 20px;
+  }
+}
+
+h1, h2, h3, h4, h5, h6, p, li, span {
+
+  &.pink {
+    color: $pink;
+  }
+
+  &.blue {
+    color: $blue;
+  }
+
+  &.center {
+    text-align: center;
+  }
+
+  a, span, ul, li {
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+  }
+}

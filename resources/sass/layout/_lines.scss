@@ -1,0 +1,27 @@
+section.line {
+
+  .container {
+    @include grid;
+    @include container;
+  }
+
+  + section.line {
+    @extend %standard-top-space;
+  }
+
+  &:first-of-type {
+    padding-top: 220px;
+  }
+
+  &.small {
+    .container {
+      max-width: $max-width-md;
+    }
+  }
+
+  &.extra-small {
+    .container {
+      max-width: $max-width-xs;
+    }
+  }
+}

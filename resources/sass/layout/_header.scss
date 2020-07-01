@@ -1,0 +1,45 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9;
+
+  width: 100%;
+
+  background-color: $dark;
+
+  .container {
+    @include container;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 140px;
+
+    .logo {
+      width: 40px;
+    }
+
+    nav {
+
+      a {
+        font-size: 18px;
+      }
+
+      a:not(.button) {
+        color: white;
+        opacity: .6;
+
+        & + a {
+          margin-left: 40px;
+        }
+
+        &:hover,
+        &.active {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

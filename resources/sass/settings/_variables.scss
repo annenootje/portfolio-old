@@ -1,0 +1,33 @@
+$transition: 250ms ease-in-out;
+
+//max-width
+$max-width: 1280px;
+$max-width-md: 800px;
+$max-width-xs: 550px;
+
+//media queries
+$media-xs: 375px;
+$media-sm: 576px;
+$media-md: 768px;
+$media-lg: 922px;
+$media-xl: 1200px;
+
+//grid
+$grid-model: 12;
+$grid-gutter: 4.5%;
+$grid-model-xl: 12;
+$grid-gutter-xl: 4.5%;
+$grid-model-lg: 12;
+$grid-gutter-lg: 4.5%;
+$grid-model-md: 8;
+$grid-gutter-md: 4.5%;
+$grid-model-sm: 4;
+$grid-gutter-sm: 4.5%;
+$grid-model-xs: 4;
+$grid-gutter-xs: 4.5%;
+
+//colors
+$dark: #081132;
+$blue: #6A7084;
+$lightblue: #101939;
+$pink: #FFAFCD;

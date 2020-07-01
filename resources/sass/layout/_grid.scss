@@ -1,0 +1,93 @@
+@mixin grid-basic-styles {
+  position: relative;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+
+  display: flex;
+}
+
+@function part-width ($size: 1, $model: $grid-model, $gutter: $grid-gutter) {
+  @return ((100% - ($gutter * ($model - 1))) / $model) * $size + ($gutter * ($size - 1));
+}
+
+@mixin grid {
+  @include grid-basic-styles;
+
+  @for $i from 1 through $grid-model {
+    .part-#{$i}:not(.no-gutter) {
+      width: part-width($i, $grid-model, $grid-gutter);
+    }
+    .part-#{$i}.no-gutter {
+      width: part-width($i, $grid-model, 0);
+    }
+  }
+
+  @media (max-width: $media-xl) {
+    @for $i from 1 through $grid-model-xl {
+      .part-xl-#{$i}:not(.no-gutter) {
+        width: part-width($i, $grid-model-xl, $grid-gutter-xl);
+      }
+      .part-xl-#{$i}.no-gutter {
+        width: part-width($i, $grid-model-xl, 0);
+      }
+    }
+  }
+
+  @media (max-width: $media-lg) {
+    @for $i from 1 through $grid-model-lg {
+      .part-lg-#{$i}:not(.no-gutter) {
+        width: part-width($i, $grid-model-lg, $grid-gutter-lg);
+      }
+      .part-lg-#{$i}.no-gutter {
+        width: part-width($i, $grid-model-lg, 0);
+      }
+    }
+  }
+
+  @media (max-width: $media-md) {
+    @for $i from 1 through $grid-model-md {
+      .part-md-#{$i}:not(.no-gutter) {
+        width: part-width($i, $grid-model-md, $grid-gutter-md);
+      }
+      .part-md-#{$i}.no-gutter {
+        width: part-width($i, $grid-model-md, 0);
+      }
+    }
+  }
+
+  @media (max-width: $media-sm) {
+    @for $i from 1 through $grid-model-sm {
+      .part-sm-#{$i}:not(.no-gutter) {
+        width: part-width($i, $grid-model-sm, $grid-gutter-sm);
+      }
+      .part-sm-#{$i}.no-gutter {
+        width: part-width($i, $grid-model-sm, 0);
+      }
+    }
+  }
+
+  @media (max-width: $media-xs) {
+    @for $i from 1 through $grid-model-xs {
+      .part-xs-#{$i}:not(.no-gutter) {
+        width: part-width($i, $grid-model-xs, $grid-gutter-xs);
+      }
+      .part-xs-#{$i}.no-gutter {
+        width: part-width($i, $grid-model-xs, 0);
+      }
+    }
+  }
+}
+
+[class^="part"] {
+
+  &.right-content {
+    display: flex;
+    justify-content: flex-end;
+  }
+  &.center-content {
+    display: flex;
+    justify-content: center;
+  }
+}

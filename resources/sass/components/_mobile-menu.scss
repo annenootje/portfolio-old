@@ -1,0 +1,19 @@
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 100vw;
+  z-index: 99;
+
+  width: 100vw;
+  height: 100vh;
+
+  transition: $transition;
+
+  .container {
+    @include container;
+  }
+
+  &.active {
+    left: 0;
+  }
+}
