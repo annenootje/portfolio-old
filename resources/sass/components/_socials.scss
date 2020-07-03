@@ -1,0 +1,27 @@
+.socials {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    .social {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    
+        border-radius: 20px;
+        width: 90px;
+        height: 90px;
+
+        transition: background 300ms ease-in-out;
+    
+        background-color: rgba(255, 255, 255, 0.08);
+
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.12);
+        }
+
+        & + .social {
+            margin-left: 15px;
+        }
+    }
+}

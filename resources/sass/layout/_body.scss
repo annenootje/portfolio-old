@@ -15,6 +15,13 @@ body {
 
   main {
     flex: 1 0 auto;
+
+    .container {
+      .container {
+        padding-right: 0!important;
+        padding-left: 0!important;
+      }
+    }
   }
 
   footer {

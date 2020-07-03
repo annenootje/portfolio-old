@@ -17,8 +17,8 @@
                 </a>
                 <nav>
                     <a href="/about">Over mij</a>
-                    <a href="/services">Diensten</a>
-                    <a href="/projects">Projecten</a>
+                    <a href="/diensten">Diensten</a>
+                    <a href="/projecten">Projecten</a>
                     <a href="/contact" class="button">Contact</a>
                 </nav>
                 <div class="hamburger">
@@ -29,7 +29,9 @@
             </div>
         </header>
 
-        @yield('content')
+        <main>
+            @yield('content')
+        </main>
 
         <footer>
             <div class="container">
@@ -45,17 +47,16 @@
                         </div>
                         <div class="part-6">
                             <p><b>Documenten</b></p>
-                            <a href="/privacy">Privacy verklaring</a>
+                            <a href="/privacy">Privacyverklaring</a>
                             <a href="/cookies">Cookies</a>
                         </div>
                     </div>
                 </div>
                 <div class='part-3 right-content'>
                     <p><b>Contact</b></p>
-                    <a href="mailto:info@annenoteboom.nl">info@annenoteboom.nl</a>
+                    {{-- <a href="mailto:{{ $contactdetail[0]->email }}">{{ $contactdetail[0]->email }}</a> --}}
                 </div>
             </div>
         </footer>
-        
     </body>
 </html>

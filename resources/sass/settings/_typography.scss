@@ -6,6 +6,12 @@ html {
 * {
   @extend %text;
   line-height: 1.5;
+  font-size: 14px;
+}
+
+::selection {
+  background: $pink;
+  color: white;
 }
 
 h1 {
@@ -45,8 +51,41 @@ b {
 }
 
 a {
+  color: white;
   text-decoration: none;
-  transition: $transition;
+  transition: opacity $transition;
+
+  &.border-link {
+    position: relative;
+
+    color: $pink;
+    padding: 5px 0;
+    // border-bottom: 1px solid $pink;
+    // transition: 250ms ease-in-out;
+
+    &::after {
+      content: '';
+
+      position: absolute;
+      bottom: 0px;
+      right: 0;
+
+      height: 1px;
+      width: 100%;
+
+      background-color: $pink;
+      transition: width 250ms ease-in-out;
+    }
+
+    &:hover {
+      &:after {
+        width: 0;
+        left: 0;
+      }
+    }
+
+
+  }
 }
 
 ul {

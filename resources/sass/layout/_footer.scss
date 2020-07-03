@@ -22,5 +22,9 @@ footer {
         width: 70px;
       }
     }
+
+    p, a {
+      min-width: 200px;
+    }
   }
 }
