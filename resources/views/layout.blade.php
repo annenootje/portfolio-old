@@ -36,14 +36,18 @@
         <footer>
             <div class="container">
                 <div class='part-3'>
-                    <div class="logo">
+                    <a href="/" class="logo">
                         <img src="/img/logo.svg" alt="Logo Anne Noteboom">
-                    </div>
+                    </a>
                 </div>
                 <div class='part-5'>
                     <div class="container">
                         <div class="part-6">
                             <p><b>Pagina's</b></p>
+                            <a href="/">Home</a>
+                            <a href="/diensten">Diensten</a>
+                            <a href="/projecten">Projecten</a>
+                            <a href="/contact">Contact</a>
                         </div>
                         <div class="part-6">
                             <p><b>Documenten</b></p>
@@ -52,9 +56,17 @@
                         </div>
                     </div>
                 </div>
-                <div class='part-3 right-content'>
+                <div class='part-2'>
                     <p><b>Contact</b></p>
-                    {{-- <a href="mailto:{{ $contactdetail[0]->email }}">{{ $contactdetail[0]->email }}</a> --}}
+                    <a href="mailto:{{ $contactdetail[0]->email }}">{{ $contactdetail[0]->email }}</a>
+                    <br><br>
+                    <div class="socials">
+                        @foreach($socials as $social)
+                            <a class="social" target="_blank" href="{{$social->link}}">
+                                <img src="{{$social->image}}" alt="Social media Anne Noteboom">
+                            </a>
+                        @endforeach
+                    </div>
                 </div>
             </div>
         </footer>

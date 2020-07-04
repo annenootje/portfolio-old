@@ -6,6 +6,11 @@ footer {
   .container {
     @include container;
 
+    .part-5,
+    .part-2 {
+      padding-top: 70px;
+    }
+
     .logo {
       display: flex;
       align-items: center;
@@ -23,8 +28,38 @@ footer {
       }
     }
 
+    .socials {
+      justify-content: flex-start;
+      width: 100%;
+
+      .social {
+        width: 40px;
+        height: 40px;
+        min-width: unset;
+        border-radius: 10px;
+
+        background-color: $pink;
+
+        img {
+          width: 15px;
+          height: 15px;
+        }
+      }
+    }
+
     p, a {
-      min-width: 200px;
+      min-width: 180px;
+      display: block;
+      
+      & + p,
+      & + a
+      {
+        margin-top: 6px;
+      }
+    }
+
+    p {
+      margin-bottom: 15px;
     }
   }
 }

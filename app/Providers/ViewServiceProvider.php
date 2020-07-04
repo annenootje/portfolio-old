@@ -25,8 +25,8 @@ class ViewServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        View::composer('layout', function ($view) {
-            $view->with('contactdetail', Contactdetail::all());
-        });
+        // View::composer('layout', function ($view) {
+        //     $view->with('contactdetail', Contactdetail::all());
+        // });
     }
 }

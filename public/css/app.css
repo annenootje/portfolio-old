@@ -1616,12 +1616,17 @@ section.line .container .part-12.no-gutter {
   }
 }
 
+section.line .container img.center {
+  margin: auto;
+  display: block;
+}
+
 section.line:first-of-type {
   padding-top: 200px;
 }
 
 section.line.small .container {
-  max-width: 900px;
+  max-width: 990px;
 }
 
 section.line.extra-small .container {
@@ -2073,6 +2078,11 @@ footer .container .part-12.no-gutter {
   }
 }
 
+footer .container .part-5,
+footer .container .part-2 {
+  padding-top: 70px;
+}
+
 footer .container .logo {
   display: flex;
   align-items: center;
@@ -2087,9 +2097,39 @@ footer .container .logo img {
   width: 70px;
 }
 
+footer .container .socials {
+  justify-content: flex-start;
+  width: 100%;
+}
+
+footer .container .socials .social {
+  width: 40px;
+  height: 40px;
+  min-width: unset;
+  border-radius: 10px;
+  background-color: #FFAFCD;
+}
+
+footer .container .socials .social img {
+  width: 15px;
+  height: 15px;
+}
+
 footer .container p,
 footer .container a {
-  min-width: 200px;
+  min-width: 180px;
+  display: block;
+}
+
+footer .container p + p,
+footer .container p + a,
+footer .container a + p,
+footer .container a + a {
+  margin-top: 6px;
+}
+
+footer .container p {
+  margin-bottom: 15px;
 }
 
 .button {
@@ -2120,6 +2160,11 @@ footer .container a {
 
 .button:hover:before {
   top: 0;
+}
+
+.button.center {
+  display: table;
+  margin: auto;
 }
 
 .hamburger {

@@ -3,6 +3,13 @@ section.line {
   .container {
     @include grid;
     @include container;
+
+    img {
+      &.center {
+        margin: auto;
+        display: block;
+      }
+    }
   }
 
   + section.line {

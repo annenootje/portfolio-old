@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Contactdetail;
 use App\Message;
 use App\Social;
+use App\Aboutdetail;
 
 class PagesController extends Controller
 {
@@ -16,7 +17,9 @@ class PagesController extends Controller
     }
 
     public function about() {
-        return view('about');
+        $about = Aboutdetail::all();
+
+        return view('about', compact('about'));
     }
 
     public function diensten() {
